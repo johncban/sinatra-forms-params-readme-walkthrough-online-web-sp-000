@@ -2,11 +2,6 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
 
-  params = {
-    :name => "Sam",
-    :favorite_food => "Green Eggs and Ham"
-  }
-
   get '/food_form' do
     erb :food_form
   end
@@ -15,5 +10,5 @@ class App < Sinatra::Base
   post '/food' do
     "My name is #{params[:name]}, and I love #{params[:favorite_food]}"
   end
-  
+
 end
